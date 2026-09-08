@@ -384,10 +384,12 @@ to avoid fate sharing if one of the networks becomes unreachable.
 
 ## Same Origin URIs
 
-Publication service operators need to be aware of the normative updates to
-[@!RFC8182] specified in Section 3.1 of [@!RFC9674]. In short, these updates mean that
-all delta and snapshot URIs need to reside on the same host, i.e., HTTP
-redirects or references to other origins are not allowed and not followed by RPs.
+Publication service operators need to be aware of the normative updates
+to [@!RFC8182] specified in Section 3.1 of [@!RFC9674]. In short, these
+updates mean that all RRDP delta and snapshot resources need have the
+same origin, i.e., HTTP redirects or references to resources with a
+different origin compared to the referring RRDP SubjectInfoAccess
+AccessDescription are not allowed and not followed by RPs.
 
 ## Endpoint Protection
 
@@ -728,7 +730,7 @@ This document does not introduce any new security issues beyond those already di
 
 # Acknowledgments
 
-The authors wish to thank Mike Hollyman, Theodor-Fedor Vompe, and Magnus Westerlund for editorial suggestions.
+The authors wish to thank Mike Hollyman, Theodor-Fedor Vompe, Magnus Westerlund, and Patrik Fältström for their feedback and suggestions.
 
 {backmatter}
 
